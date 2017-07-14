@@ -8,7 +8,7 @@ import static jdk.nashorn.internal.objects.NativeMath.random;
  */
 public class Roll {
 
-    public static void main (String [] args){
+    public static void main(String[] args) {
 
         int sides = 0;
         int die1;
@@ -28,32 +28,37 @@ public class Roll {
 
             System.out.println(roll(sides));
 
-            System.out.println(roll(sides));
+            System.out.println(roll2(sides));
+
+
 
             System.out.println("Would you like to continue (yes or no)");
 
             answer = scan.nextLine();
 
 
-        }while (answer.equalsIgnoreCase("Yes"));
+        } while (answer.equalsIgnoreCase("Yes"));
 
 
     }
 
 
+    public static int roll(int a) {
 
+        Random rand = new Random();
 
-        public static int roll (int a){
-
-            Random rand = new Random();
-
-            return 1 + rand.nextInt(a);
-
-        }
-
-
+        return 1 + rand.nextInt(a);
 
     }
+
+    public static int roll2(int a) {
+
+
+        return 1 + (int) (Math.random()*a);
+
+    }
+
+}
 
 
 
